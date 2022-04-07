@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="csubject" required placeholder="ENTER YOUR SUBJECT">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="email" name="cemail" required placeholder="ENTER YOUR EMAIL">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="cmessage" required placeholder="ENTER YOURMESSAGE">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="SEND">
+    </form>
+    {% for msg in messages %}
+    <script>
+        
+        alert('{{msg}}')
+    </script>
+    {% endfor %}
+</body>
+</html>
