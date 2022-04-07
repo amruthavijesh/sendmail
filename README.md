@@ -1,1 +1,1 @@
-# mailsend
+# sendmail
